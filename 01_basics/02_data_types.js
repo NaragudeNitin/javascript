@@ -21,3 +21,5 @@ let age = 23; //num range 2 to power of 53
 // eg 
 console.log(typeof null);
 
+//todo: read datatypes
+
