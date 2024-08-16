@@ -25,6 +25,33 @@ let myObj = { //object
 const myFunction = function() {
     console.log("Hello World");
 }
-
 console.log(typeof myFunction);
+
+//++++++++++++++++++++++++++++++ MEMORIES ++++++++++++++++++++++++++++++++
+///there are two types of memories in stack memory and heap memory
+
+//all primitive datatypes are stored in stack memory
+//all non primitive datatypes are stored in heap memory
+
+//whenever we use stack memory we will get the copy of declared variable,
+//heap memory gives reference that is original value // object etc
+
+let myYoutubeName = 'Nitinnaragude124q';
+let anotherName = myYoutubeName;
+anotherName = "learning javascript";
+console.log("Printing another name: ",anotherName);
+console.log("printing my youtube name ",myYoutubeName);
+
+let user1 = {
+    "email": "user@yopmail.com",
+    "upi" : "user@ibl" 
+}
+
+let user2 = user1;
+
+user2.email = 'change@yopmail.com';
+
+console.log( "printing user2 email", user2.email);
+
+console.log( "printing user1 email", user1.email);
 
