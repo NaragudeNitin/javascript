@@ -28,3 +28,49 @@ values outside the block are the are global, and values declared inside the bl0c
 you will find scopes as different when you check with browser(by inspecting) and while doing it with the node
 */
 
+// ---------------closures------------- //
+//nested scope
+//child functions can access parent variables, but parent functions can not access child's variables 
+
+function one() {
+    const username = 'jsjn';
+    function two() {
+        const website = 'Youtube';
+        console.log(username);
+    }
+    // console.log(website);//this can not be accessed outside
+    two();
+}
+
+// one();
+
+if (true) {
+    const username = "new name";
+    if (username === "new name") {
+        const website = ' Youtttbe';
+        // console.log(username + website);
+    }
+    // console.log(website);//not accessible
+}
+
+// console.log(username);//not accessible
+
+
+//_----___----______----- INTERESTING ____-----_____-------___//
+
+/* 
+addOne(5);//if we call this function before declaring  it will give no error
+addTwo(5); //this will give error
+
+because you are storing function in variable and we are calling before it is declared 
+
+ */
+function addOne(num) {
+    return num + 1;
+}
+addOne(5);
+
+const addTwo = function (num) {
+    return num + 2;
+}
+addTwo(5);
